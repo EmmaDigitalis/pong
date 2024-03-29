@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="utf-8" />
+    <title>Canvas tutorial</title>
+    <script src="includes/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div id="fpsCounter"></div>
+    <div id="debugWindow" class="hidden">Debug is ON</div>
+
+    <div id="gameArea">
+        <canvas id="gameBG" width="1280" height="720"></canvas>
+        <canvas id="gamePlay" width="1280" height="720"></canvas>
+        <div id="gameUI">
+            <div id="HUD">
+                <div class="score" id="p1">0</div>
+                <div class="score" id="p2">0</div>
+            </div>
+            <div id="popup"></div>
+            <div id="scoreup"></div>
+            <div id="tutorial"></div>
+            <div id="explosion"></div>
+        </div>
+    </div>
+
+
+
+    <script type="module" src="js/init.js"></script>
+    <script src="js/fps.js"></script>
+</body>
+
+</html>

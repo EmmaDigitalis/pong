@@ -1,0 +1,94 @@
+@font-face {
+    font-family: 'debugFont';
+    src: url('../fonts/FFFFORWA.ttf');
+}
+
+:root{
+    --scaler: 1;
+}
+
+*{
+    pointer-events: none;
+    font-family: debugFont;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background: url('../img/bg.png');
+}
+
+#gameArea{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#gameArea>*{
+    position: absolute;
+    outline: 1px solid black;
+}
+
+#gameBG{
+    z-index: 1;
+}
+
+#gamePlay{
+    z-index: 2;
+}
+
+#gameUI{
+    z-index: 3;
+    width: calc(1280px * var(--scaler));
+    height: calc(720px * var(--scaler));
+    border: 1px solid red;
+    overflow: hidden;
+}
+
+#fpsCounter{
+    position: fixed;
+    z-index: 5;
+}
+
+#debugWindow{
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 6;
+    color: white;
+    font-size: 14px;
+    width: 320px;
+    height: 100vh;
+    background: black;
+    border: 1px dashed white;
+    padding: 4px;
+}
+
+.gameAreaDebug{
+    justify-content: flex-end !important;
+}
+
+.hidden{
+    display: none !important;
+}
+
+/*----GAME UI ELEMENTS-----*/
+#gameUI *{
+    color: white;
+}
+
+#gameUI > #HUD{
+    padding-top: 4px;
+    height: 100px;
+    background: #222222;
+    display: flex;
+    justify-content: space-around;
+}
+
+#gameUI > #HUD > *{
+    font-size: 56px;
+}
